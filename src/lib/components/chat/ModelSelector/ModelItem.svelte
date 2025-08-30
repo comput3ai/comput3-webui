@@ -76,12 +76,9 @@
 		<div class="flex items-center gap-2">
 			<div class="flex items-center min-w-fit">
 				<Tooltip content={$user?.role === 'admin' ? (item?.value ?? '') : ''} placement="top-start">
-					<img
-						src={item.model?.info?.meta?.profile_image_url ??
-							`${WEBUI_BASE_URL}/static/favicon.png`}
-						alt="Model"
-						class="rounded-full size-5 flex items-center"
-					/>
+					<div class="size-5 flex items-center justify-center border border-cyan-400 text-cyan-400 font-bold text-[10px] bg-black/80 font-mono cyberpunk-model-icon">
+						{item.label?.charAt(0)?.toUpperCase() || 'M'}
+					</div>
 				</Tooltip>
 			</div>
 

@@ -123,16 +123,9 @@
 											selectedModelIdx = modelIdx;
 										}}
 									>
-										<img
-											crossorigin="anonymous"
-											src={model?.info?.meta?.profile_image_url ??
-												($i18n.language === 'dg-DG'
-													? `${WEBUI_BASE_URL}/doge.png`
-													: `${WEBUI_BASE_URL}/static/favicon.png`)}
-											class=" size-9 @sm:size-10 rounded-full border-[1px] border-gray-100 dark:border-none"
-											aria-hidden="true"
-											draggable="false"
-										/>
+										<div class="size-9 @sm:size-10 flex items-center justify-center border-2 border-orange-500 text-orange-500 font-bold text-sm bg-black/80 font-mono">
+											{model?.name?.charAt(0).toUpperCase() || 'M'}
+										</div>
 									</button>
 								</Tooltip>
 							{/each}

@@ -607,13 +607,9 @@
 		dir={$settings.chatDirection}
 	>
 		<div class={`shrink-0 ltr:mr-3 rtl:ml-3 hidden @lg:flex mt-1 `}>
-			<ProfileImage
-				src={model?.info?.meta?.profile_image_url ??
-					($i18n.language === 'dg-DG'
-						? `${WEBUI_BASE_URL}/doge.png`
-						: `${WEBUI_BASE_URL}/favicon.png`)}
-				className={'size-8 assistant-message-profile-image'}
-			/>
+					<div class="size-8 flex items-center justify-center border-2 border-green-500 text-green-500 font-bold text-xs bg-black/80 font-mono">
+			AI
+		</div>
 		</div>
 
 		<div class="flex-auto w-0 pl-1 relative">

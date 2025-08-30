@@ -16,6 +16,32 @@ export default defineConfig({
 			]
 		})
 	],
+	server: {
+		proxy: {
+			'/api': {
+				target: 'https://chat.comput3.org',
+				changeOrigin: true,
+				secure: true,
+				ws: true
+			},
+			'/openai': {
+				target: 'https://chat.comput3.org',
+				changeOrigin: true,
+				secure: true
+			},
+			'/ollama': {
+				target: 'https://chat.comput3.org',
+				changeOrigin: true,
+				secure: true
+			},
+			'/ws': {
+				target: 'https://chat.comput3.org',
+				changeOrigin: true,
+				secure: true,
+				ws: true
+			}
+		}
+	},
 	define: {
 		APP_VERSION: JSON.stringify(process.env.npm_package_version),
 		APP_BUILD_HASH: JSON.stringify(process.env.APP_BUILD_HASH || 'dev-build')

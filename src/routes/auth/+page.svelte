@@ -193,9 +193,9 @@
 						<div
 							class="flex items-center justify-center gap-3 text-xl sm:text-2xl text-center font-semibold dark:text-gray-200"
 						>
-							<div>
-								{$i18n.t('Signing in to {{WEBUI_NAME}}', { WEBUI_NAME: $WEBUI_NAME })}
-							</div>
+													<div>
+							Connecting to Comput3...
+						</div>
 
 							<div>
 								<Spinner className="size-5" />
@@ -205,17 +205,13 @@
 				{:else}
 					<div class="my-auto flex flex-col justify-center items-center">
 						<div class=" sm:max-w-md my-auto pb-10 w-full dark:text-gray-100">
-							{#if $config?.metadata?.auth_logo_position === 'center'}
-								<div class="flex justify-center mb-6">
-									<img
-										id="logo"
-										crossorigin="anonymous"
-										src="{WEBUI_BASE_URL}/static/favicon.png"
-										class="size-24 rounded-full"
-										alt=""
-									/>
+													{#if $config?.metadata?.auth_logo_position === 'center'}
+							<div class="flex justify-center mb-6">
+								<div class="size-24 flex items-center justify-center comput3-logo text-2xl">
+									COMPUT3.AI
 								</div>
-							{/if}
+							</div>
+						{/if}
 							<form
 								class=" flex flex-col justify-center"
 								on:submit={(e) => {
@@ -224,17 +220,17 @@
 								}}
 							>
 								<div class="mb-1">
-									<div class=" text-2xl font-medium">
-										{#if $config?.onboarding ?? false}
-											{$i18n.t(`Get started with {{WEBUI_NAME}}`, { WEBUI_NAME: $WEBUI_NAME })}
-										{:else if mode === 'ldap'}
-											{$i18n.t(`Sign in to {{WEBUI_NAME}} with LDAP`, { WEBUI_NAME: $WEBUI_NAME })}
-										{:else if mode === 'signin'}
-											{$i18n.t(`Sign in to {{WEBUI_NAME}}`, { WEBUI_NAME: $WEBUI_NAME })}
-										{:else}
-											{$i18n.t(`Sign up to {{WEBUI_NAME}}`, { WEBUI_NAME: $WEBUI_NAME })}
-										{/if}
-									</div>
+																	<div class=" text-2xl font-medium">
+									{#if $config?.onboarding ?? false}
+										Connect to Comput3
+									{:else if mode === 'ldap'}
+										Connect to Comput3 with LDAP
+									{:else if mode === 'signin'}
+										Connect to Comput3
+									{:else}
+										Sign up to Comput3
+									{/if}
+								</div>
 
 									{#if $config?.onboarding ?? false}
 										<div class="mt-1 text-xs font-medium text-gray-600 dark:text-gray-500">

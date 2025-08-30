@@ -1,3 +1,6 @@
+@import "./app-cyberpunk.css";
+@import "./lib/components/layout/cyberpunk-sidebar.css";
+@import "./lib/components/chat/cyberpunk-chat.css";
 @reference "./tailwind.css";
 
 @font-face {

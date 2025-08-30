@@ -39,7 +39,9 @@
 	}}
 >
 	<div class="shrink-0 self-top -translate-y-0.5">
-		<img src="{WEBUI_BASE_URL}/static/favicon.png" alt="favicon" class="size-7 rounded-full" />
+		<div class="size-7 flex items-center justify-center border-2 border-orange-500 text-orange-500 font-bold text-xs bg-black/80">
+			!
+		</div>
 	</div>
 
 	<div>
